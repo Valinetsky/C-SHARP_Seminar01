@@ -5,7 +5,7 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input second number: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-int remainder = num2 % num1;
+int remainder = num1 % num2;
 
 if (remainder == 0)
 {
