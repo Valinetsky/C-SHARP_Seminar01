@@ -12,3 +12,11 @@ Console.WriteLine("Random number");
 Console.WriteLine(number);
 
 Console.WriteLine(result);
+
+string numToStr = Convert.ToString(number);
+Console.WriteLine("number to string");
+Console.WriteLine(numToStr);
+Console.Write(numToStr[0]);
+Console.WriteLine(numToStr[2]);
+
+Console.WriteLine($"{numToStr[0]}{numToStr[2]}");
