@@ -7,9 +7,9 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input second number: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 * num1 == num2)
+if (num1 * num1 == num2 || num2 * num2 == num1)
 {
-	System.Console.WriteLine($"{num2} square of {num1}");
+	System.Console.WriteLine("Yeah!!!");
 }
 else
 {
