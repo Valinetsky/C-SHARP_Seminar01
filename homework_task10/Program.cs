@@ -12,4 +12,4 @@ int number = Convert.ToInt32(strNumber);
 Console.WriteLine($"From string. Second digit: {strNumber[1]}");
 
 int result = (number / 10) % 10;
-Console.WriteLine($"From number. Second digit: {result}"); a
+Console.WriteLine($"From number. Second digit: {result}");
