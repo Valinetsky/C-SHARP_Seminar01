@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/homework_task21.csproj": {}
+    "C:\\Users\\Roman\\Desktop\\GB\\C-SHARP\\Seminars-C-Sharp\\homework_task21\\homework_task21.csproj": {}
   },
   "projects": {
-    "/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/homework_task21.csproj": {
+    "C:\\Users\\Roman\\Desktop\\GB\\C-SHARP\\Seminars-C-Sharp\\homework_task21\\homework_task21.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/homework_task21.csproj",
+        "projectUniqueName": "C:\\Users\\Roman\\Desktop\\GB\\C-SHARP\\Seminars-C-Sharp\\homework_task21\\homework_task21.csproj",
         "projectName": "homework_task21",
-        "projectPath": "/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/homework_task21.csproj",
-        "packagesPath": "/Users/Roman/.nuget/packages/",
-        "outputPath": "/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/",
+        "projectPath": "C:\\Users\\Roman\\Desktop\\GB\\C-SHARP\\Seminars-C-Sharp\\homework_task21\\homework_task21.csproj",
+        "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Roman\\Desktop\\GB\\C-SHARP\\Seminars-C-Sharp\\homework_task21\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "R:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/Roman/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
