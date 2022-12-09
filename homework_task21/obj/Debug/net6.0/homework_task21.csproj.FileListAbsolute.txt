@@ -1,0 +1,15 @@
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.csproj.AssemblyReference.cache
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.AssemblyInfoInputs.cache
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.AssemblyInfo.cs
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.csproj.CoreCompileInputs.cache
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/bin/Debug/net6.0/homework_task21
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/bin/Debug/net6.0/homework_task21.deps.json
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/bin/Debug/net6.0/homework_task21.runtimeconfig.json
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/bin/Debug/net6.0/homework_task21.dll
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/bin/Debug/net6.0/homework_task21.pdb
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.dll
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/refint/homework_task21.dll
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.pdb
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/homework_task21.genruntimeconfig.cache
+/Users/Roman/GB/C-SHARP_Seminar01/homework_task21/obj/Debug/net6.0/ref/homework_task21.dll
