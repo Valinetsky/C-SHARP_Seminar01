@@ -45,7 +45,7 @@ System.Console.WriteLine("===");
 System.Console.WriteLine("Разница между максимальным и минимальным элементом массива:");
 System.Console.WriteLine(getDiffirence(findMinInArray(myArray), findMaxInArray(myArray)));
 
-// ------------- function return diff between miт and max
+// ------------- function return diff between min and max
 double getDiffirence(double min, double max)
 {
 	double result = max - min;
