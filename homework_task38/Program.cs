@@ -31,27 +31,67 @@ System.Console.WriteLine(leftRange);
 System.Console.WriteLine("rightRange");
 System.Console.WriteLine(rightRange);
 
+arrayFill(myArray,
+		  leftRange,
+		  rightRange);
 
-arrayFill(myArray, leftRange, rightRange);
-// System.Console.WriteLine("88888888888888888888888888888888888");
-// Console.WriteLine("Массив: [ " + string.Join(" | ", myArray) + " ]");
+// ============== Main OUTPUT
+System.Console.WriteLine("Значение минимального элемента массива:");
+System.Console.WriteLine(findMinInArray(myArray));
+System.Console.WriteLine("+++++++++++++");
+System.Console.WriteLine("Значение максимального элемента массива:");
+System.Console.WriteLine(findMaxInArray(myArray));
+System.Console.WriteLine("===");
+System.Console.WriteLine("Разница между максимальным и минимальным элементом массива:");
+System.Console.WriteLine(getDiffirence(findMinInArray(myArray), findMaxInArray(myArray)));
 
-// System.Console.WriteLine($"Количество четных чисел в массиве: {sumInArray(myArray)}");
+// ------------- function return diff between miт and max
+double getDiffirence(double min, double max)
+{
+	double result = max - min;
+	return result;
+}
 
-// -------------- SUM in array ------------
-// int sumInArray(int[] arr)
-// {
-// 	int sum = 0;
-// 	for (int i = 0; i < arr.Length; i++)
-// 	{
-// 		if (arr[i] % 2 == 0)
-// 		{
-// 			System.Console.WriteLine(arr[i]);
-// 			sum++;
-// 		}
-// 	}
-// 	return sum;
-// }
+// ------------Two function to find MIN and MAX in array
+double findMinInArray(double[] arr)
+{
+	double localMin = arr[0];
+	for (int i = 0; i < arr.Length; i++)
+	{
+		if (arr[i] < localMin)
+		{
+			localMin = arr[i];
+		}
+	}
+	return localMin;
+}
+
+double findMaxInArray(double[] arr)
+{
+	double localMax = arr[0];
+	for (int i = 0; i < arr.Length; i++)
+	{
+		if (arr[i] > localMax)
+		{
+			localMax = arr[i];
+		}
+	}
+	return localMax;
+}
+
+// ------------Function to find first index of number in array
+// ------- not used in task -------------
+double findIndexOfInArray(double[] arr, double number)
+{
+	for (int i = 0; i < arr.Length; i++)
+	{
+		if (arr[i] == number)
+		{
+			return number;
+		}
+	}
+	return -1;
+}
 
 // ------------------- fill ARRAY
 double[] arrayFill(double[] arr, int left, int right)
@@ -77,19 +117,11 @@ int numberMax(int leftRange, int rightRange)
 	return Math.Max(leftRange, rightRange);
 }
 
-// --------------------- RANDOM NUMBER from - to -------------------
+// --------------------- RANDOM NUMBER from - to (not included) -------------------
 double GetRandomFrom(int bottom, int top)
 {
 	Random rnd = new Random();
-	// Random rndDouble = rnd.NextDouble();
-	double result = rnd.Next(bottom, top) + rnd.NextDouble();
-	// К целому случайному числу из диапазона добавляем случайное число
-	// из математического диапазона [0, 1) - единица не входит.
-	// Получим вещественное число не превышающее общий диапазон.
-	// Как-то непросто, но пока - так.
-	System.Console.WriteLine("=============================");
-	System.Console.WriteLine(result);
-	return result;
+	return bottom + rnd.NextDouble() * (top - bottom);
 }
 
 // ------------------------ safe input number
