@@ -57,7 +57,7 @@ void printArray(double[,] arr)
 	}
 }
 
-// ------------------- fill ARRAY
+// ------------------- fill ARRAY double
 void arrayFill(double[,] arr, int left, int right, int digits)
 {
 	for (int i = 0; i < arr.GetLength(0); i++)
