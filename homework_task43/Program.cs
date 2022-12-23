@@ -55,6 +55,9 @@ double coordY(double b1, double k1, double X)
 // ------------------------ safe input double number
 double inputNumberPrompt(string str)
 {
+	System.Console.WriteLine("При вводе десятичного разделителя");
+	System.Console.WriteLine("в зависимости от настроек региона");
+	System.Console.WriteLine("нужно набрать \",\" или \".\".");
 	double number;
 	string text;
 

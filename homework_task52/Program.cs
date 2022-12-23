@@ -14,6 +14,8 @@ System.Console.WriteLine("Введите размерность массива")
 int m = inputNumberPrompt("Количество строк M: ");
 int n = inputNumberPrompt("Количество столбцов N: ");
 
+double w = inputNumberPromptDouble("Probe");
+
 int[,] MyArray = new int[m, n];
 
 arrayFill(MyArray, LEFTRANGE, RIGHTRANGE);
@@ -92,6 +94,28 @@ int inputNumberPrompt(string str)
 		Console.Write($"{str} ");
 		text = Console.ReadLine();
 		if (int.TryParse(text, out number))
+		{
+			break;
+		}
+		Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
+	}
+	return number;
+}
+
+// ------------------------ safe input double number
+double inputNumberPromptDouble(string str)
+{
+	System.Console.WriteLine("При вводе десятичного разделителя");
+	System.Console.WriteLine("в зависимости от настроек региона");
+	System.Console.WriteLine("нужно набрать \",\" или \".\".");
+	double number;
+	string text;
+
+	while (true)
+	{
+		Console.Write($"{str} ");
+		text = Console.ReadLine();
+		if (double.TryParse(text, out number))
 		{
 			break;
 		}
