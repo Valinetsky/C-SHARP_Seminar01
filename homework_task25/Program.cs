@@ -14,31 +14,31 @@ System.Console.WriteLine($"Число {A} в степени {B} равно {numb
 // ----------------------------------------
 int numberPow(int A, int B)
 {
-    int result = 1;
+	int result = 1;
 
-    for (int i = 1; i <= B; i++)
-    {
-        result = result * A;
-    }
+	for (int i = 1; i <= B; i++)
+	{
+		result = result * A;
+	}
 
-    return result;
+	return result;
 }
 
 // ----------------------------------------
 int inputNumber()
 {
-    int number;
-    string text;
+	int number;
+	string text;
 
-    while (true)
-    {
-        Console.Write("Введите число: ");
-        text = Console.ReadLine();
-        if (int.TryParse(text, out number))
-        {
-            break;
-        }
-        Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
-    }
-    return number;
+	while (true)
+	{
+		Console.Write("Введите число: ");
+		text = Console.ReadLine();
+		if (int.TryParse(text, out number))
+		{
+			break;
+		}
+		Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
+	}
+	return number;
 }
