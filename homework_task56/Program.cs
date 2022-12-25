@@ -19,7 +19,10 @@ int RIGHTRANGE = 9;
 
 System.Console.WriteLine("Введите размерность массива");
 int m = inputNumberPrompt("Количество строк M: ");
+m = limitMinimum(2, m);
+
 int n = inputNumberPrompt("Количество столбцов N: ");
+n = limitMinimum(2, n);
 
 int[,] MyArray = new int[m, n];
 
@@ -30,6 +33,17 @@ printArray(MyArray);
 System.Console.WriteLine("---------------------");
 
 System.Console.WriteLine(findMinIn2dArray(MyArray));
+
+// --------------- limitation
+int limitMinimum(int min, int current)
+{
+    if (current < min)
+    {
+        System.Console.WriteLine("Предполагается прямоугольный массив, значение скорректировано");
+        current = min;
+    }
+    return current;
+}
 
 // --------------- Find min row in 2dARRAY
 int findMinIn2dArray(int[,] arr)
