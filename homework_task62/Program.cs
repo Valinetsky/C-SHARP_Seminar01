@@ -10,52 +10,56 @@ square = limitMinimum(1, square);
 
 int[,] MyArray = new int[square, square];
 
+spiralFilling(MyArray);
 
-int directFill = 0;
-int counter = 1;
-int[] localDirection = new int[2];
-
-int localX = 0;
-int localY = 0;
-
-MyArray[localX, localY] = counter;
-counter++;
-
-while (counter <= square * square)
-{
-	localDirection = ChangeDirection(directFill);
-
-	printArray(MyArray);
-
-	int newLocalX = localX + localDirection[0];
-	int newLocalY = localY + localDirection[1];
-
-	if (newLocalX < 0 || newLocalX >= square || newLocalY < 0 || newLocalY >= square)
-	{
-		directFill = (directFill + 1) % 4;
-		continue;
-	}
-
-	if (MyArray[newLocalY, newLocalX] != 0)
-	{
-		directFill = (directFill + 1) % 4;
-		continue;
-	}
-	MyArray[newLocalY, newLocalX] = counter;
-	counter++;
-	localX = newLocalX;
-	localY = newLocalY;
-}
-
+System.Console.WriteLine();
+System.Console.WriteLine("Final output");
 printArray(MyArray);
 
-for (int i = 0; i < 7; i++)
+// ------------------ 2d square Array spiral filling
+void spiralFilling(int[,] arr)
 {
-	System.Console.WriteLine("Change");
-	System.Console.WriteLine(i);
+	// Направление заполнения массива: 0 - влево, 1 - вниз, 2 - вправо, 3 - вверх
+	int directFill = 0; 
+	
+	int counter = 1;
+	int[] localDirection = new int[2];
 
-	Console.WriteLine("Массив: [ " + string.Join(" | ", ChangeDirection(i % 4)) + " ]");
+	int localX = 0;
+	int localY = 0;
 
+	arr[localX, localY] = counter;
+	counter++;
+
+	while (counter <= arr.GetLength(0) * arr.GetLength(0))
+	{
+		// Получаем массив приращения направлений. Для каждой из двух координат.
+		localDirection = ChangeDirection(directFill);
+		
+		int newLocalX = localX + localDirection[0];
+		int newLocalY = localY + localDirection[1];
+
+		if (newLocalX < 0 || newLocalX >= square || newLocalY < 0 || newLocalY >= square)
+		{
+			directFill = (directFill + 1) % 4;
+			continue;
+		}
+
+		if (arr[newLocalY, newLocalX] != 0)
+		{
+			directFill = (directFill + 1) % 4;
+			continue;
+		}
+		arr[newLocalY, newLocalX] = counter;
+
+		// // ------------ Array fill step output
+		// System.Console.WriteLine();
+		// printArray(arr);
+		
+		counter++;
+		localX = newLocalX;
+		localY = newLocalY;
+	}
 }
 
 // ------------------- PRINT 2dARRAY
@@ -97,6 +101,7 @@ int[] ChangeDirection(int directFill)
 	{
 		arr[1] = 1;
 	}
+
 	return arr;
 }
 
