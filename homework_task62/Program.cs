@@ -5,10 +5,13 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int square = inputNumberPrompt("Введите размерность квадратного массива");
-square = limitMinimum(1, square);
+int squareM = inputNumberPrompt("Введите количество строк массива");
+squareM = limitMinimum(1, squareM);
 
-int[,] MyArray = new int[square, square];
+int squareN = inputNumberPrompt("Введите количество столбцов массива");
+squareN = limitMinimum(1, squareN);
+
+int[,] MyArray = new int[squareM, squareN];
 
 spiralFilling(MyArray);
 
@@ -31,7 +34,7 @@ void spiralFilling(int[,] arr)
 	arr[localX, localY] = counter;
 	counter++;
 
-	while (counter <= arr.GetLength(0) * arr.GetLength(0))
+	while (counter <= arr.GetLength(0) * arr.GetLength(1))
 	{
 		// Получаем массив приращения направлений. Для каждой из двух координат.
 		localDirection = ChangeDirection(directFill);
@@ -39,7 +42,7 @@ void spiralFilling(int[,] arr)
 		int newLocalX = localX + localDirection[0];
 		int newLocalY = localY + localDirection[1];
 
-		if (newLocalX < 0 || newLocalX >= square || newLocalY < 0 || newLocalY >= square)
+		if (newLocalX < 0 || newLocalX >= arr.GetLength(1) || newLocalY < 0 || newLocalY >= arr.GetLength(0))
 		{
 			directFill = (directFill + 1) % 4;
 			continue;
