@@ -5,62 +5,46 @@
 // 11 16 15 06
 // 10 09 08 07
 
-
-System.Console.WriteLine("Введите размерность массива");
 int square = inputNumberPrompt("Введите размерность квадратного массива");
 square = limitMinimum(1, square);
 
-
-
 int[,] MyArray = new int[square, square];
+
 
 int directFill = 0;
 int counter = 1;
+int[] localDirection = new int[2];
 
-for (int i = 0; i < square; i++)
-{
-	MyArray[0, i] = counter;
-	counter++;
-}
-printArray(MyArray);
+int localX = 0;
+int localY = 0;
 
+MyArray[localX, localY] = counter;
+counter++;
 
 while (counter <= square * square)
 {
-	int localCount = 1;
+	localDirection = ChangeDirection(directFill);
 
-	int[] localDirection = ChangeDirection(directFill);
-	System.Console.WriteLine(localDirection[0]);
-	System.Console.WriteLine(localDirection[1]);
+	printArray(MyArray);
 
-	int localX = square - 1;
-	int localY = 0;
+	int newLocalX = localX + localDirection[0];
+	int newLocalY = localY + localDirection[1];
 
-	for (int i = square - localCount; i >= 0; i--)
+	if (newLocalX < 0 || newLocalX >= square || newLocalY < 0 || newLocalY >= square)
 	{
-		for (int j = 1; j <= i; j++)
-		{
-			localX = localX + localDirection[1];
-			localY = localY + localDirection[0];
-			System.Console.WriteLine("localX");
-			System.Console.WriteLine(localX);
-			System.Console.WriteLine("localY");
-			System.Console.WriteLine(localY);
-
-			MyArray[localY, localX] = counter;
-			printArray(MyArray);
-			System.Console.WriteLine("...");
-			counter++;
-		}
-
 		directFill = (directFill + 1) % 4;
-		localDirection = ChangeDirection(directFill);
-
-		System.Console.WriteLine("directFill");
-		System.Console.WriteLine(directFill);
-		localCount++;
+		continue;
 	}
 
+	if (MyArray[newLocalY, newLocalX] != 0)
+	{
+		directFill = (directFill + 1) % 4;
+		continue;
+	}
+	MyArray[newLocalY, newLocalX] = counter;
+	counter++;
+	localX = newLocalX;
+	localY = newLocalY;
 }
 
 printArray(MyArray);
@@ -73,13 +57,6 @@ for (int i = 0; i < 7; i++)
 	Console.WriteLine("Массив: [ " + string.Join(" | ", ChangeDirection(i % 4)) + " ]");
 
 }
-
-
-
-
-
-
-// System.Console.WriteLine(MyArray[3, 3]);
 
 // ------------------- PRINT 2dARRAY
 void printArray(int[,] arr)
