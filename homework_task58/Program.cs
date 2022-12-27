@@ -33,6 +33,11 @@ System.Console.WriteLine("************************");
 
 int MatrixTwoRow = inputNumberPrompt("Количество строк второй матрицы: ");
 MatrixTwoRow = limitMinimum(1, MatrixTwoRow);
+if (MatrixTwoRow != MatrixOneCol)
+{
+	System.Console.WriteLine("Матрицу можно умножить на матрицу только в том случае, если число столбцов первой равняется числу строк второй. Размер скорректирован.");
+	MatrixTwoRow = MatrixOneCol;
+}
 
 int MatrixTwoCol = inputNumberPrompt("Количество столбцов второй матрицы: ");
 MatrixTwoCol = limitMinimum(1, MatrixTwoCol);
